@@ -1,6 +1,5 @@
 package com.company.MartinezChaconSummativeProject1.controller;
 
-import com.company.MartinezChaconSummativeProject1.models.Quote;
 import com.company.MartinezChaconSummativeProject1.models.Definition;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -14,13 +13,13 @@ public class WordController
     /**
      * NOTE: Word API returns a DEFINITION Model
      */
-    private List<Quote> definitions;
+    private List<Definition> definitions;
 
     private static int idCounter = 1;
 
     public WordController()
     {
-         definitions = new ArrayList<Quote>();
+         definitions = new ArrayList<Definition>();
 
         Definition definition1 = new Definition();
         definition1.setId(idCounter++);
@@ -33,4 +32,6 @@ public class WordController
         definition2.setDefinition("A condition or requirement that is specified or demanded as part of an agreement.");
 
     }
+
+
 }
