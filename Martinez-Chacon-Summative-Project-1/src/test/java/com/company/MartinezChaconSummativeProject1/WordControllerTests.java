@@ -28,10 +28,10 @@ public class  WordControllerTests
     /**
      * Tests response status of Word Controller endpoint
      * "/word" should be "200 OK"
-     * @throws Exception 
+     * @throws Exception
      */
     @Test
-    public void shouldReturnARandomDefinitionForAWord() throws Exception
+    public void shouldReturnHTTPResponseStatus200Ok() throws Exception
     {
         // Arrange : none
 
