@@ -12,7 +12,7 @@ public class Magic8BallController
     /**
      * NOTE: Magic8Ball API will return an ANSWER model
      *
-     *       Magic8Ball is not to be initialized with a question,
+     *       Answer model is not to be initialized with a question,
      *       as the request body of the GET request will provide one.
      */
     private List<Answer> answers;

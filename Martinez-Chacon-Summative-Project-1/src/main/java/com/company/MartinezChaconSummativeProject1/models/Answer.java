@@ -4,7 +4,7 @@ import java.util.Objects;
 
 public class Answer
 {
-    // NOTE: Magic8Ball is not to be initialized with a question,
+    // NOTE: Answer model is not to be initialized with a question,
     //       as the request body of the GET request will provide one.
     private int id;
     private String question;
