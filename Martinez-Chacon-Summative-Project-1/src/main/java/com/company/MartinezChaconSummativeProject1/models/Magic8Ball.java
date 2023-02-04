@@ -4,6 +4,8 @@ import java.util.Objects;
 
 public class Magic8Ball
 {
+    // NOTE: Magic8Ball is not to be initialized with a question,
+    //       as the request body of the GET request will provide one.
     private int id;
     private String question;
     private String answer;
