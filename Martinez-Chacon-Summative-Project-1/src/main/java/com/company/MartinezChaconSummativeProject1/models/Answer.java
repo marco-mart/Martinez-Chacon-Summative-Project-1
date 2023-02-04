@@ -2,7 +2,7 @@ package com.company.MartinezChaconSummativeProject1.models;
 
 import java.util.Objects;
 
-public class Magic8Ball
+public class Answer
 {
     // NOTE: Magic8Ball is not to be initialized with a question,
     //       as the request body of the GET request will provide one.
@@ -38,7 +38,7 @@ public class Magic8Ball
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Magic8Ball that = (Magic8Ball) o;
+        Answer that = (Answer) o;
         return id == that.id && Objects.equals(question, that.question) && Objects.equals(answer, that.answer);
     }
 

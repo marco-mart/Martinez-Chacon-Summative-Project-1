@@ -1,7 +1,7 @@
 package com.company.MartinezChaconSummativeProject1.controller;
 
 import com.company.MartinezChaconSummativeProject1.models.Quote;
-import com.company.MartinezChaconSummativeProject1.models.Word;
+import com.company.MartinezChaconSummativeProject1.models.Definition;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
@@ -10,23 +10,27 @@ import java.util.List;
 @RestController
 public class WordController
 {
-    private List<Quote> words;
+
+    /**
+     * NOTE: Word API returns a DEFINITION Model
+     */
+    private List<Quote> definitions;
 
     private static int idCounter = 1;
 
     public WordController()
     {
-        words = new ArrayList<Quote>();
+         definitions = new ArrayList<Quote>();
 
-        Word word1 = new Word();
-        word1.setId(idCounter++);
-        word1.setWord("Serendipity");
-        word1.setDefinition("The occurrence and development of events by chance in a happy or beneficial way.");
+        Definition definition1 = new Definition();
+        definition1.setId(idCounter++);
+        definition1.setWord("Serendipity");
+        definition1.setDefinition("The occurrence and development of events by chance in a happy or beneficial way.");
 
-        Word word2 = new Word();
-        word2.setId(idCounter++);
-        word2.setWord("Stipulation");
-        word2.setDefinition("A condition or requirement that is specified or demanded as part of an agreement.");
+        Definition definition2 = new Definition();
+        definition2.setId(idCounter++);
+        definition2.setWord("Stipulation");
+        definition2.setDefinition("A condition or requirement that is specified or demanded as part of an agreement.");
 
     }
 }

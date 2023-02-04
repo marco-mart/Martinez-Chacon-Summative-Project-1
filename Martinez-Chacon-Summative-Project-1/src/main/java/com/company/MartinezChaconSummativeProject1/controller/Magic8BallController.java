@@ -1,6 +1,6 @@
 package com.company.MartinezChaconSummativeProject1.controller;
 
-import com.company.MartinezChaconSummativeProject1.models.Magic8Ball;
+import com.company.MartinezChaconSummativeProject1.models.Answer;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
@@ -9,27 +9,29 @@ import java.util.List;
 @RestController
 public class Magic8BallController
 {
-
-    private List<Magic8Ball> magic8Balls;
-
+    /**
+     * NOTE: Magic8Ball API will return an ANSWER model
+     *
+     *       Magic8Ball is not to be initialized with a question,
+     *       as the request body of the GET request will provide one.
+     */
+    private List<Answer> answers;
     private static int idCounter = 1;
 
-    // NOTE: Magic8Ball is not to be initialized with a question,
-    //       as the request body of the GET request will provide one.
     public Magic8BallController()
     {
-        magic8Balls = new ArrayList<Magic8Ball>();
+        answers = new ArrayList<Answer>();
 
-        Magic8Ball ball1 = new Magic8Ball();
-        ball1.setId(idCounter++);
-        ball1.setAnswer("Maybe");
+        Answer answer1 = new Answer();
+        answer1.setId(idCounter++);
+        answer1.setAnswer("Maybe");
 
-        Magic8Ball ball2 = new Magic8Ball();
-        ball2.setId(idCounter++);
-        ball2.setAnswer("Yes");
+        Answer answer2 = new Answer();
+        answer2.setId(idCounter++);
+        answer2.setAnswer("Yes");
 
-        Magic8Ball ball3 = new Magic8Ball();
-        ball3.setId(idCounter++);
-        ball3.setAnswer("No");
+        Answer answer3 = new Answer();
+        answer3.setId(idCounter++);
+        answer3.setAnswer("No");
     }
 }
