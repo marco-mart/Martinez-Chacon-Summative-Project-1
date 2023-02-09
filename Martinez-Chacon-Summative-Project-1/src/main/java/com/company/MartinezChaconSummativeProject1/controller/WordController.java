@@ -37,6 +37,61 @@ public class WordController
         definition2.setDefinition("A condition or requirement that is specified or demanded as part of an agreement.");
 
         definitions.add(definition2);
+
+        Definition definition3 = new Definition();
+        definition3.setId(idCounter++);
+        definition3.setWord("Variable");
+        definition3.setDefinition("An element, feature, or factor that is liable to vary or change.");
+
+        definitions.add(definition3);
+
+        Definition definition4 = new Definition();
+        definition4.setId(idCounter++);
+        definition4.setWord("Integrity");
+        definition4.setDefinition("The quality of being honest and having strong moral principles; moral uprightness.");
+
+        definitions.add(definition4);
+
+        Definition definition5 = new Definition();
+        definition5.setId(idCounter++);
+        definition5.setWord("Culture");
+        definition5.setDefinition("The customs, arts, social institutions, and achievements of a particular nation, people, or other social group.");
+
+        definitions.add(definition5);
+
+        Definition definition6 = new Definition();
+        definition6.setId(idCounter++);
+        definition6.setWord("Regression");
+        definition6.setDefinition("A return to a former or less developed state.");
+        definitions.add(definition6);
+
+        Definition definition7 = new Definition();
+        definition7.setId(idCounter++);
+        definition7.setWord("Growth");
+        definition7.setDefinition("The process of increasing in amount, value, or importance.");
+
+        definitions.add(definition7);
+
+        Definition definition8 = new Definition();
+        definition8.setId(idCounter++);
+        definition8.setWord("Seismic");
+        definition8.setDefinition("Of enormous proportions or effect.");
+
+        definitions.add(definition8);
+
+        Definition definition9 = new Definition();
+        definition9.setId(idCounter++);
+        definition9.setWord("Home");
+        definition9.setDefinition("A place where something flourishes, is most typically found, or from which it originates.");
+
+        definitions.add(definition9);
+
+        Definition definition10 = new Definition();
+        definition10.setId(idCounter++);
+        definition10.setWord("International");
+        definition10.setDefinition("Existing, occurring, or carried on between two or more nations");
+
+        definitions.add(definition10);
     }
 
     /**
