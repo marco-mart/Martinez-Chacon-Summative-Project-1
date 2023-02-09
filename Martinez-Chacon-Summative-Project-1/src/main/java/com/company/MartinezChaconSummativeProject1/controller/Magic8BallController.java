@@ -56,12 +56,32 @@ public class Magic8BallController
 
     }
 
-    @RequestMapping(value = "/magic-8-ball/{question}", method = RequestMethod.POST)
+    /**
+     * Endpoint "/magic" which will return a random response to a question
+     * asked by the user.
+     * @param question
+     * @return a random answer to a question asked by the user
+     */
+    @RequestMapping(value = "/magic", method = RequestMethod.POST)
     @ResponseStatus(value = HttpStatus.CREATED)
-    public Answer createResponse(@PathVariable String question) {
+    public Answer createResponse(@RequestBody(required = false) String question)
+    {
+
         // generate random index for in-memory data
         int range = answers.size();
         int randomIndex = (int) (Math.random() * range);
+
+        // when "/magic" (no question) is invoked (ie empty response body)
+        if (question == null)
+        {
+            Answer temp = new Answer();
+            temp.setAnswer(answers.get(randomIndex).getAnswer());
+            temp.setQuestion("");
+
+            return temp;
+        }
+
+        // we have a question
         Answer answerTemp = answers.get(randomIndex);
 
         Answer tempObj = new Answer();

@@ -30,10 +30,9 @@ public class Magic8BallControllerTests
 
     /**
      * Tests response status of Magic8Ball Controller endpoint
-     * "/quote" should be "200 OK"
+     * "/magic-8-ball/{question}" should be "201 CREATED"
      * @throws Exception
      */
-    // Testing POST /records
     @Test
     public void shouldReturnNewResponseOnPostRequest() throws Exception {
 
@@ -43,15 +42,9 @@ public class Magic8BallControllerTests
         // Convert Java Object to JSON
         String inputJson = mapper.writeValueAsString(inputRecord);
 
-        Answer outputRecord = new Answer();
-
-        String outputJson = mapper.writeValueAsString(outputRecord);
-
         // ACT
         mockMvc.perform(
                         post("/magic-8-ball/test-question")        // Perform the POST request
-                                .content(inputJson)                       // Set the request body
-                                .contentType(MediaType.APPLICATION_JSON)  // Tell the server it's in JSON format
                 )
                 .andDo(print())                                // Print results to console
                 .andExpect(status().isCreated());              // ASSERT (status code is 201)
