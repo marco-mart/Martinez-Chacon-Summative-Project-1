@@ -30,7 +30,7 @@ public class Magic8BallControllerTests
 
     /**
      * Tests response status of Magic8Ball Controller endpoint
-     * "/magic-8-ball/{question}" should be "201 CREATED"
+     * "/magic" should be "201 CREATED"
      * @throws Exception
      */
     @Test
