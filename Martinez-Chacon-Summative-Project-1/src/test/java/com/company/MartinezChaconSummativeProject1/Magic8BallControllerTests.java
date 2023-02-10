@@ -4,7 +4,6 @@
 package com.company.MartinezChaconSummativeProject1;
 
 import com.company.MartinezChaconSummativeProject1.controller.Magic8BallController;
-import com.company.MartinezChaconSummativeProject1.models.Answer;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -36,15 +35,22 @@ public class Magic8BallControllerTests
     @Test
     public void shouldReturnNewResponseOnPostRequest() throws Exception {
 
-        // ARRANGE
-        Answer inputRecord = new Answer();
-
-        // Convert Java Object to JSON
-        String inputJson = mapper.writeValueAsString(inputRecord);
+        // ARRANGE: none
 
         // ACT
+
+        // test with a question
         mockMvc.perform(
-                        post("/magic-8-ball/test-question")        // Perform the POST request
+                        post("/magic")                           // Perform the POST request
+                                .content("question")                        // Set the request body
+                                .contentType(MediaType.APPLICATION_JSON)    // tell the server its in JSON format
+                )
+                .andDo(print())                                // Print results to console
+                .andExpect(status().isCreated());              // ASSERT (status code is 201)
+
+        // test without a question
+        mockMvc.perform(
+                        post("/magic")        // Perform the POST request
                 )
                 .andDo(print())                                // Print results to console
                 .andExpect(status().isCreated());              // ASSERT (status code is 201)
