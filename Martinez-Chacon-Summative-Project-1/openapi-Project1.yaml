@@ -6,17 +6,16 @@ servers:
   - url: http://localhost:8080
     description: Generated server url
 paths:
-  /magic-8-ball/{question}:
+  /magic:
     post:
       tags:
         - magic-8-ball-controller
       operationId: createResponse
-      parameters:
-        - name: question
-          in: path
-          required: true
-          schema:
-            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: string
       responses:
         '201':
           description: Created
