@@ -3,15 +3,15 @@
 Video Summary: https://youtu.be/kCeonKtori4
 
 My partner's and my submission for Summative Project 1, as a part of Netflix Pathways Advanced Java Bootcamp. 
-The object was to build a REST API using Spring Boot (a Java based framework) and Spring MVC (to handle incoming HTTP requests).
+The objective was to build a REST API using Spring Boot (a Java based framework) and Spring MVC (to handle incoming HTTP requests).
 
-The projects revolves around 3 user stories:
+Our project focuses on 3 user stories:
 
 1. As an API user, I want to request a random quote so that I can expand my knowledge.
 2. As an API user, I want to request a random word and its definition so that I can expand my vocabulary.
 3. As an API user, I want to request a random answer to a question so that I can be entertained.
 
-We implemented these user stories using 3 API's:
+These user stories were implemented using 3 API's:
 
 Magic 8 Ball
 ------------
@@ -36,18 +36,18 @@ Responds with a 200 OK status.
 
 Testing with MockMVC
 --------------------
-We used MockMVC (a testing framework) to simulate HTTP requests and test the behavior of a Spring MVC
+Testing was done using MockMVC (a testing framework) to simulate HTTP requests and test the behavior of a Spring MVC
 controller.
 
-Because it would be impractical to test a random object response for correctness, we defered to instead
-test only the response received by the HTTP method.
+It would be impractical to test the random object response, so tested only the response received by the HTTP
+method.
 
 
 Documentation Using Swagger
 ---------------------------
-We used Swagger (a framework for creating and maintaining API documentation) to document our REST API
-as a way to provide a clear and concise representation of our API's resources and operations.
+Swagger (a framework for creating and maintaining API documentation) was used to document our REST API
+providing a clear and concise representation of our API's resources and operations.
 
 In-Memory Data
 --------------
-In place of a database, we defered to using in-memory data for simple testing.
+For simple testing, in-memory data was used instead of a database.
