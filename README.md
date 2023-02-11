@@ -33,7 +33,7 @@ Testing with MockMVC
 We used MockMVC (a testing framework) to simulate HTTP requests and test the behavior of a Spring MVC
 controller.
 
-Because it would be impractical to test a random object response for correctness, we deffered to instead
+Because it would be impractical to test a random object response for correctness, we defered to instead
 test the only the response received by the HTTP method.
 
 
@@ -41,3 +41,7 @@ Documentation Using Swagger
 ---------------------------
 We used Swagger (a framework for creating and maintaining API documentation) to document our REST API
 as a way to provide a clear and concise representation of our API's resources and operations.
+
+In-Memory Data
+--------------
+In place of a database, we defered to using in-memory data for simple testing.
